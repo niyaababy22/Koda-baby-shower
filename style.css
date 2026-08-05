@@ -1,4 +1,3 @@
-
 :root {
   --cream: #fdf6ee;
   --cream-deep: #f4e6d4;
@@ -673,8 +672,8 @@ body {
 }
 @media (max-width: 480px) {
   .invite-card {
-    margin: 1.5rem auto;
-    padding: 2.25rem 1.25rem 2rem;
+    margin: 1.5rem 1.25rem;
+    padding: 2rem 1.1rem 1.75rem;
     border-radius: 20px;
   }
 
@@ -776,7 +775,8 @@ body {
 
 @media (max-width: 360px) {
   .invite-card {
-    padding: 1.75rem 1rem 1.75rem;
+    margin: 1.25rem 0.9rem;
+    padding: 1.6rem 0.9rem 1.6rem;
   }
 
   .countdown-item {
