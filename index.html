@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Someone Special is on the Way</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing">
+
+  <!-- faint watermark of paw prints trailing across the page -->
+  <div class="paw-trail" aria-hidden="true">
+    <svg class="paw paw--1" viewBox="0 0 60 60"><use href="#paw-shape"/></svg>
+    <svg class="paw paw--2" viewBox="0 0 60 60"><use href="#paw-shape"/></svg>
+    <svg class="paw paw--3" viewBox="0 0 60 60"><use href="#paw-shape"/></svg>
+    <svg class="paw paw--4" viewBox="0 0 60 60"><use href="#paw-shape"/></svg>
+  </div>
+
+  <!-- scattered white baby claws across the pink background -->
+  <div class="claw-scatter" aria-hidden="true">
+    <svg class="claw claw--1" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+    <svg class="claw claw--2" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+    <svg class="claw claw--3" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+    <svg class="claw claw--4" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+    <svg class="claw claw--5" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+    <svg class="claw claw--6" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+    <svg class="claw claw--7" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+    <svg class="claw claw--8" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+    <svg class="claw claw--9" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+    <svg class="claw claw--10" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
+  </div>
+
+  <!-- shared paw + claw shape definitions -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <g id="paw-shape">
+        <ellipse cx="30" cy="40" rx="15" ry="12"/>
+        <circle cx="12" cy="24" r="6"/>
+        <circle cx="24" cy="12" r="6"/>
+        <circle cx="38" cy="12" r="6"/>
+        <circle cx="50" cy="22" r="6"/>
+      </g>
+      <g id="claw-shape">
+        <ellipse cx="30" cy="42" rx="14" ry="11"/>
+        <circle cx="14" cy="25" r="5.5"/>
+        <circle cx="26" cy="15" r="5.5"/>
+        <circle cx="38" cy="15" r="5.5"/>
+        <circle cx="48" cy="23" r="5.5"/>
+        <path d="M11 18 L13.5 10" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;"/>
+        <path d="M24 8 L26 1" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;"/>
+        <path d="M36 8 L38 1" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;"/>
+        <path d="M46 16 L49.5 9" style="fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;"/>
+      </g>
+    </defs>
+  </svg>
+
+  <main class="landing-hero">
+    <div class="invite-card">
+      <p class="eyebrow">A Little One Is Coming</p>
+
+      <svg class="bear-illustration" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="55" cy="55" r="26" fill="var(--brown)" />
+        <circle cx="145" cy="55" r="26" fill="var(--brown)" />
+        <circle cx="55" cy="55" r="14" fill="var(--blush)" />
+        <circle cx="145" cy="55" r="14" fill="var(--blush)" />
+        <circle cx="100" cy="100" r="70" fill="var(--brown)" />
+        <ellipse cx="100" cy="118" rx="34" ry="26" fill="var(--cream)" />
+        <circle cx="78" cy="90" r="6" fill="var(--ink)" />
+        <circle cx="122" cy="90" r="6" fill="var(--ink)" />
+        <ellipse cx="100" cy="108" rx="9" ry="7" fill="var(--ink)" />
+        <path d="M100 115 L100 124 M100 124 Q88 131 80 121 M100 124 Q112 131 120 121"
+              stroke="var(--ink)" stroke-width="3" fill="none" stroke-linecap="round" />
+        <path d="M138 70 L157 57 L157 83 Z" fill="var(--gold)" />
+        <path d="M138 70 L119 57 L119 83 Z" fill="var(--gold)" />
+        <circle cx="138" cy="70" r="6" fill="var(--gold-soft)" />
+      </svg>
+
+      <h1 class="headline">Someone <em>Special</em> is on the Way</h1>
+      <p class="subtext">Join us in welcoming the newest little bear to the family.</p>
+
+      <a class="btn" href="invitation.html">Open Your Invitation</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
