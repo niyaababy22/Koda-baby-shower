@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Someone Special is on the Way</title>
+  <title>Koda's Baby Shower</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="landing">
+<body class="invitation" data-confetti="true">
 
-  <!-- faint watermark of paw prints trailing across the page -->
-  <div class="paw-trail" aria-hidden="true">
-    <svg class="paw paw--1" viewBox="0 0 60 60"><use href="#paw-shape"/></svg>
-    <svg class="paw paw--2" viewBox="0 0 60 60"><use href="#paw-shape"/></svg>
-    <svg class="paw paw--3" viewBox="0 0 60 60"><use href="#paw-shape"/></svg>
-    <svg class="paw paw--4" viewBox="0 0 60 60"><use href="#paw-shape"/></svg>
-  </div>
+  <a href="guestlist.html" class="guestlist-link" aria-label="Guest list" title="Guest list">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="8" y1="6" x2="20" y2="6"/>
+      <line x1="8" y1="12" x2="20" y2="12"/>
+      <line x1="8" y1="18" x2="20" y2="18"/>
+      <circle cx="4" cy="6" r="1.4" fill="currentColor" stroke="none"/>
+      <circle cx="4" cy="12" r="1.4" fill="currentColor" stroke="none"/>
+      <circle cx="4" cy="18" r="1.4" fill="currentColor" stroke="none"/>
+    </svg>
+  </a>
 
   <!-- scattered white baby claws across the pink background -->
   <div class="claw-scatter" aria-hidden="true">
@@ -33,7 +36,6 @@
     <svg class="claw claw--10" viewBox="0 0 60 60"><use href="#claw-shape"/></svg>
   </div>
 
-  <!-- shared paw + claw shape definitions -->
   <svg width="0" height="0" style="position:absolute">
     <defs>
       <g id="paw-shape">
@@ -57,38 +59,208 @@
     </defs>
   </svg>
 
-  <main class="landing-hero">
-    <div class="invite-card">
-      <p class="eyebrow">A Little One Is Coming</p>
 
-      <svg class="bear-illustration" viewBox="0 0 200 200" aria-hidden="true">
-        <circle cx="55" cy="55" r="26" fill="var(--brown)" />
-        <circle cx="145" cy="55" r="26" fill="var(--brown)" />
-        <circle cx="55" cy="55" r="14" fill="var(--blush)" />
-        <circle cx="145" cy="55" r="14" fill="var(--blush)" />
-        <circle cx="100" cy="100" r="70" fill="var(--brown)" />
-        <ellipse cx="100" cy="118" rx="34" ry="26" fill="var(--cream)" />
-        <circle cx="78" cy="90" r="6" fill="var(--ink)" />
-        <circle cx="122" cy="90" r="6" fill="var(--ink)" />
-        <ellipse cx="100" cy="108" rx="9" ry="7" fill="var(--ink)" />
-        <path d="M100 115 L100 124 M100 124 Q88 131 80 121 M100 124 Q112 131 120 121"
-              stroke="var(--ink)" stroke-width="3" fill="none" stroke-linecap="round" />
-        <path d="M138 70 L157 57 L157 83 Z" fill="var(--gold)" />
-        <path d="M138 70 L119 57 L119 83 Z" fill="var(--gold)" />
-        <circle cx="138" cy="70" r="6" fill="var(--gold-soft)" />
-      </svg>
+  <main class="invite-card fade-section">
 
-      <h1 class="headline">Someone <em>Special</em> is on the Way</h1>
-      <p class="subtext">Join us in welcoming the newest little bear to the family.</p>
+    <span class="badge">It's a Girl!</span>
 
-      <a class="btn" href="invitation.html">Open Your Invitation</a>
+    <svg class="bear-illustration bear-illustration--small" viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="55" cy="55" r="26" fill="var(--brown)" />
+      <circle cx="145" cy="55" r="26" fill="var(--brown)" />
+      <circle cx="55" cy="55" r="14" fill="var(--blush)" />
+      <circle cx="145" cy="55" r="14" fill="var(--blush)" />
+      <circle cx="100" cy="100" r="70" fill="var(--brown)" />
+      <ellipse cx="100" cy="118" rx="34" ry="26" fill="var(--cream)" />
+      <circle cx="78" cy="90" r="6" fill="var(--ink)" />
+      <circle cx="122" cy="90" r="6" fill="var(--ink)" />
+      <ellipse cx="100" cy="108" rx="9" ry="7" fill="var(--ink)" />
+      <path d="M100 115 L100 124 M100 124 Q88 131 80 121 M100 124 Q112 131 120 121"
+            stroke="var(--ink)" stroke-width="3" fill="none" stroke-linecap="round" />
+      <path d="M138 70 L157 57 L157 83 Z" fill="var(--gold)" />
+      <path d="M138 70 L119 57 L119 83 Z" fill="var(--gold)" />
+      <circle cx="138" cy="70" r="6" fill="var(--gold-soft)" />
+    </svg>
+
+    <h1 class="headline">Jordan <span class="amp">&amp;</span> Rakiyyah</h1>
+    <p class="subtext">request the pleasure of your company as they welcome their baby girl</p>
+    <p class="baby-name">Koda A'Nae Taylor</p>
+
+    <!-- Countdown -->
+    <section class="details" aria-label="Event details">
+  <div class="detail">
+    <span class="detail-label">Date</span>
+    <span class="detail-value" id="detail-date">To Be Announced</span>
+  </div>
+
+  <div class="detail">
+    <span class="detail-label">Time</span>
+    <span class="detail-value" id="detail-time">To Be Announced</span>
+  </div>
+
+  <div class="detail">
+    <span class="detail-label">Location</span>
+    <span class="detail-value" id="detail-location">To Be Announced</span>
+  </div>
+
+  <div class="detail">
+    <span class="detail-label">RSVP</span>
+    <span class="detail-value" id="detail-rsvp">To Be Announced</span>
+  </div>
+</section>
+
+    
+    <section class="countdown-section">
+  <div class="countdown" id="countdown">
+
+    <div class="countdown-item">
+      <span class="countdown-num" id="cd-days">0</span>
+      <span class="countdown-label">Days</span>
     </div>
+
+    <div class="countdown-item">
+      <span class="countdown-num" id="cd-hours">0</span>
+      <span class="countdown-label">Hours</span>
+    </div>
+
+    <div class="countdown-item">
+      <span class="countdown-num" id="cd-minutes">0</span>
+      <span class="countdown-label">Minutes</span>
+    </div>
+
+    <div class="countdown-item">
+      <span class="countdown-num" id="cd-seconds">0</span>
+      <span class="countdown-label">Seconds</span>
+    </div>
+
+  </div>
+
+  <p class="countdown-note" id="countdown-note">
+    A new date will be announced soon.
+  </p>
+</section>
+
+    
+    <section class="photos">
+      <div class="photo-frame photo-frame--single">
+        <img src="images/baby3.jpg" alt="Ultrasound photo" class="photo" />
+        <div class="photo-placeholder">
+          <svg class="paw" viewBox="0 0 60 60"><use href="#paw-shape"/></svg>
+          <span>Baby Koda</span>
+        </div>
+        <p class="photo-caption">Baby Koda</p>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp-section" id="rsvp">
+      <h2 class="section-title">Will You Be Attending?</h2>
+
+      <div class="rsvp-toggle">
+        <button type="button" class="toggle-btn" data-choice="yes">Yes, I'll be there!</button>
+        <button type="button" class="toggle-btn" data-choice="no">I can't make it</button>
+      </div>
+
+      <form id="rsvp-form" class="rsvp-form hidden">
+        <div class="field">
+          <label for="rsvp-name">Your Name</label>
+          <input type="text" id="rsvp-name" required />
+        </div>
+
+        <div class="field hidden" id="guests-field">
+          <label for="rsvp-guests">Total Guests (including you)</label>
+          <input type="number" id="rsvp-guests" min="1" value="1" />
+        </div>
+
+        <div class="field" id="note-field">
+          <label for="rsvp-note">Leave a sweet note for the parents-to-be</label>
+          <textarea id="rsvp-note" rows="3" placeholder="Sending love from afar..."></textarea>
+        </div>
+
+        <p class="rsvp-hint hidden" id="public-hint">
+          Your note will appear on the well-wishes wall below for other guests to see.
+        </p>
+
+        <button type="submit" class="btn" id="rsvp-submit">Send RSVP</button>
+      </form>
+
+      <div class="rsvp-thanks hidden" id="rsvp-thanks">
+        <svg class="paw" viewBox="0 0 60 60" aria-hidden="true"><use href="#paw-shape"/></svg>
+        <p id="rsvp-thanks-text">Thank you!</p>
+      </div>
+    </section>
+
+    <!-- Public well wishes -->
+    <section class="wishes-section">
+      <h2 class="section-title">Well Wishes</h2>
+      <p class="section-subtext">Sweet notes from those celebrating from afar</p>
+      <div class="wishes-wall" id="wishes-wall">
+        <p class="wishes-empty" id="wishes-empty">Be the first to leave a note!</p>
+      </div>
+    </section>
+
+    <!-- Registry -->
+    <section class="registry-section">
+      <h2 class="section-title">Registry</h2>
+      <p class="section-subtext">Your presence is the best present, but if you'd like to bring a gift...</p>
+      
+      <a class="btn btn--ghost" href="https://www.amazon.com/baby-reg/rakiyyah-price-september-2026-lithonia/3I4FO79XKDAG0?ref_=cm_sw_r_apin_dp_ZGFR0X0YDNVBXH9FG25D_1&language=en-US" id="registry-btn">View Registry</a>
+    </section>
+
+    <footer class="invite-footer">
+      <svg class="paw paw--footer" viewBox="0 0 60 60" aria-hidden="true"><use href="#paw-shape"/></svg>
+      <p>With love, the family</p>
+    </footer>
+
   </main>
 
-  
+  <button id="scroll-top-btn" class="scroll-top-btn hidden" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor"/></svg>
+  </button>
 
-  
+  <!-- Baby Shower Postponement Announcement -->
+<div
+  class="announcement-overlay"
+  id="announcement-popup"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="announcement-title"
+>
+  <div class="announcement-popup">
+
+    <button
+      class="announcement-close"
+      id="announcement-close"
+      type="button"
+      aria-label="Close announcement"
+    >
+      &times;
+    </button>
+
+    <p class="eyebrow">A Little Change of Plans</p>
+
+    <h2 id="announcement-title">
+      Baby Koda Has Other Plans!
+    </h2>
+
+    <p>
+      Baby Koda has decided to make an appearance sooner than expected,
+      so we’ll have to postpone the baby shower.
+    </p>
+
+    <p>
+      We’ll share the new date, time, and location as soon as everything
+      is finalized. Thank you for your understanding and for celebrating
+      this special time with us!
+    </p>
+
+    <div class="announcement-paw">🐾</div>
+
+  </div>
+</div>
 
   <script src="script.js"></script>
+  <script type="module" src="rsvp.js"></script>
+
+  
 </body>
 </html>
