@@ -137,11 +137,14 @@ function launchConfetti() {
 }
 
 /* 
-   Baby Shower Announcement
-    */
+   Announcement Popup
+   */
 
-const announcementPopup = document.getElementById("announcement-popup");
-const announcementClose = document.getElementById("announcement-close");
+const announcementPopup =
+  document.getElementById("announcement-popup");
+
+const announcementClose =
+  document.getElementById("announcement-close");
 
 if (announcementPopup && announcementClose) {
 
