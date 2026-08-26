@@ -1,12 +1,8 @@
-
-const CONFIG = {
-  // Baby shower starts at 3:00 PM on August 29, 2026
-  showerDate: "2026-08-29T15:00:00",
-};
-
 /* 
    Countdown
     */
+
+
 function updateCountdown() {
   const daysEl = document.getElementById("cd-days");
   const hoursEl = document.getElementById("cd-hours");
@@ -17,42 +13,19 @@ function updateCountdown() {
   // Only run on the invitation page
   if (!daysEl) return;
 
-  if (!CONFIG.showerDate) {
-    daysEl.textContent = "--";
-    hoursEl.textContent = "--";
-    minutesEl.textContent = "--";
-    secondsEl.textContent = "--";
-    noteEl.textContent = "The date is coming soon — check back for all the details!";
-    return;
+  daysEl.textContent = "0";
+  hoursEl.textContent = "0";
+  minutesEl.textContent = "0";
+  secondsEl.textContent = "0";
+
+  if (noteEl) {
+    noteEl.textContent = "A new date will be announced soon.";
   }
-
-  const target = new Date(CONFIG.showerDate).getTime();
-  const now = Date.now();
-  const diff = target - now;
-
-  if (diff <= 0) {
-    daysEl.textContent = "0";
-    hoursEl.textContent = "0";
-    minutesEl.textContent = "0";
-    secondsEl.textContent = "0";
-    noteEl.textContent = "The big day is here!";
-    return;
-  }
-
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-
-  daysEl.textContent = days;
-  hoursEl.textContent = hours;
-  minutesEl.textContent = minutes;
-  secondsEl.textContent = seconds;
-  noteEl.textContent = "We can't wait to celebrate with you!";
 }
 
 updateCountdown();
-setInterval(updateCountdown, 1000);
+
+
 
 
 document.querySelectorAll(".photo").forEach((img) => {
