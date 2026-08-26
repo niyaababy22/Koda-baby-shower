@@ -87,46 +87,57 @@
 
     <!-- Countdown -->
     <section class="details" aria-label="Event details">
-      <div class="detail">
-        <span class="detail-label">Date</span>
-        <span class="detail-value" id="detail-date">August 29, 2026</span>
-      </div>
-      <div class="detail">
-        <span class="detail-label">Time</span>
-        <span class="detail-value" id="detail-time">3:00 PM – 5:30 PM</span>
-      </div>
-      <div class="detail">
-        <span class="detail-label">Location</span>
-        <span class="detail-value" id="detail-location">2795 Evans Mill Rd, Apt 1707<br>Lithonia, GA 30058</span>
-      </div>
-      <div class="detail">
-        <span class="detail-label">RSVP</span>
-        <span class="detail-value" id="detail-rsvp">Please RSVP by Aug 18, 2026</span>
-      </div>
-    </section>
+  <div class="detail">
+    <span class="detail-label">Date</span>
+    <span class="detail-value" id="detail-date">To Be Announced</span>
+  </div>
+
+  <div class="detail">
+    <span class="detail-label">Time</span>
+    <span class="detail-value" id="detail-time">To Be Announced</span>
+  </div>
+
+  <div class="detail">
+    <span class="detail-label">Location</span>
+    <span class="detail-value" id="detail-location">To Be Announced</span>
+  </div>
+
+  <div class="detail">
+    <span class="detail-label">RSVP</span>
+    <span class="detail-value" id="detail-rsvp">To Be Announced</span>
+  </div>
+</section>
 
     
     <section class="countdown-section">
-      <div class="countdown" id="countdown">
-        <div class="countdown-item">
-          <span class="countdown-num" id="cd-days">--</span>
-          <span class="countdown-label">Days</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-num" id="cd-hours">--</span>
-          <span class="countdown-label">Hours</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-num" id="cd-minutes">--</span>
-          <span class="countdown-label">Minutes</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-num" id="cd-seconds">--</span>
-          <span class="countdown-label">Seconds</span>
-        </div>
-      </div>
-      <p class="countdown-note" id="countdown-note">The date is coming soon — check back for all the details!</p>
-    </section>
+  <div class="countdown" id="countdown">
+
+    <div class="countdown-item">
+      <span class="countdown-num" id="cd-days">0</span>
+      <span class="countdown-label">Days</span>
+    </div>
+
+    <div class="countdown-item">
+      <span class="countdown-num" id="cd-hours">0</span>
+      <span class="countdown-label">Hours</span>
+    </div>
+
+    <div class="countdown-item">
+      <span class="countdown-num" id="cd-minutes">0</span>
+      <span class="countdown-label">Minutes</span>
+    </div>
+
+    <div class="countdown-item">
+      <span class="countdown-num" id="cd-seconds">0</span>
+      <span class="countdown-label">Seconds</span>
+    </div>
+
+  </div>
+
+  <p class="countdown-note" id="countdown-note">
+    A new date will be announced soon.
+  </p>
+</section>
 
     
     <section class="photos">
@@ -206,7 +217,50 @@
     <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor"/></svg>
   </button>
 
+  <!-- Baby Shower Postponement Announcement -->
+<div
+  class="announcement-overlay"
+  id="announcement-popup"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="announcement-title"
+>
+  <div class="announcement-popup">
+
+    <button
+      class="announcement-close"
+      id="announcement-close"
+      type="button"
+      aria-label="Close announcement"
+    >
+      &times;
+    </button>
+
+    <p class="eyebrow">A Little Change of Plans</p>
+
+    <h2 id="announcement-title">
+      Baby Koda Has Other Plans!
+    </h2>
+
+    <p>
+      Baby Koda has decided to make an appearance sooner than expected,
+      so we’ll have to postpone the baby shower.
+    </p>
+
+    <p>
+      We’ll share the new date, time, and location as soon as everything
+      is finalized. Thank you for your understanding and for celebrating
+      this special time with us!
+    </p>
+
+    <div class="announcement-paw">🐾</div>
+
+  </div>
+</div>
+
   <script src="script.js"></script>
   <script type="module" src="rsvp.js"></script>
+
+  
 </body>
 </html>
