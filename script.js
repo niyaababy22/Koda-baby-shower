@@ -162,3 +162,18 @@ function launchConfetti() {
 
   setTimeout(() => container.remove(), 4200);
 }
+
+/* 
+   Baby Shower Announcement
+    */
+
+const announcementPopup = document.getElementById("announcement-popup");
+const announcementClose = document.getElementById("announcement-close");
+
+if (announcementPopup && announcementClose) {
+
+  announcementClose.addEventListener("click", () => {
+    announcementPopup.classList.add("is-hidden");
+  });
+
+}
